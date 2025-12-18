@@ -1,0 +1,418 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color:#1F272F;
+    color: #fff;
+    font-family: "Tahoma", Geneva, sans-serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+main{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: row;
+}
+
+section{
+    margin: 0 10%;
+    padding: 2% 0;
+    padding: 3rem 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+/* Menu */
+
+#logo-hd{
+    display: flex;
+    margin-right: 50%;
+    margin-left: 5%;
+    padding: 2%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    max-width: 30%;
+}
+
+.Menu{
+    display: flex;
+    flex-direction:row;
+    width: 100%;
+    margin-bottom: 1%;
+    background-color:#161A22;
+}
+
+.menu-btn{
+    display: flex;
+    width: 100%;
+    list-style: none;
+    align-items: end;
+    justify-content: space-around;
+}
+
+.menu-btn :hover{
+    scale:1.10;
+    color: #08BC91;
+    transition: color 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+
+/* Seção sobre */
+
+.Sobre{
+    display: flex;
+    flex-direction: row;
+}
+
+.sobre-conteiner{
+    width: 50%;
+}
+
+.sobre-img{
+    text-align: end;
+}
+
+#dev-imagem{
+    padding-left: 50%;
+    width:80%;
+}
+
+.Contato-btn{
+    padding: 1%;
+    text-decoration: none;
+    background-color: #08BC91;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 20%;
+}
+
+#nome{
+    text-transform: uppercase;
+    font-size: 2rem;
+}
+
+#nome:hover{
+    color:#08BC91;
+    transition: color 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.sobre-img img:hover {
+    scale:1.10;
+    transition: scale 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+.Contato-btn:hover{
+    scale:1.30;
+    transition: scale 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+/* Seção Skills */
+
+.Skills-conteinerbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #161A22;
+    width: 100%;
+}
+
+.Skills-conteiner {
+    margin: 0 10%;
+    padding: 2% 0;
+    
+}
+
+.Skills-conteiner .skill-box {
+        display: flex;
+        flex-direction: row;
+    }
+
+
+.Skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2%;
+    margin: 2%;
+    background: linear-gradient(#161A22, #01523f);
+
+}
+
+.Skills img {
+    width: 50%;
+}
+
+.Skills:hover{
+    scale:1.10;
+    opacity: 95%;
+    background: linear-gradient(#212835, #01644d);
+    transition: scale 0.5s ease;
+    transition-delay: 0.1s;
+}
+
+/* Seção projetos */
+
+.Portfolio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.portfolio-grid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;    
+}
+
+.projeto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1% 1%;
+}
+
+.projeto img:hover{
+    scale:1.20;
+    opacity: 95%;
+    background: linear-gradient(#212835, #01644d);
+    transition: scale 0.3s ease;
+    transition-delay: 0.1s;
+}
+
+.projeto img{
+    max-width:100%;
+}
+
+/* Seção contato */
+
+.Contato{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #161A22;
+    width: 100%;
+}
+
+.Contato img{
+    max-width: 4rem;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2%;
+}
+
+.contato-card{
+    margin: 0 5%;
+}
+
+.caption-invisivel{
+    display: none;
+    color: #fff;
+    padding-top: 1%;
+}
+
+.contato-card:hover{
+    scale:1.50;
+    transition: scale 0.3s ease;
+    transition-delay: 0.1s;
+    
+}
+
+.contato-card:hover .caption-invisivel{
+        transition-delay: 1s;
+        display:block;
+    }
+
+/*Rodapé*/
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+}
+
+footer a {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#logo-ft {
+    max-width: 20rem;
+    height: auto;
+    padding: 1% 0;
+ }
+
+ /* Media Queries*/
+
+/* --- SD (640x480) e dispositivos móveis --- */
+@media (max-width: 640px) {
+    
+    .Menu {
+        flex-direction: column; 
+        align-items: center;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    /* 2. Faz o Logo ocupar a largura total e centralizar */
+    #logo-hd {
+        margin: 0 auto !important; /* Remove o margin-right: 50% do css original */
+        max-width: 90%;
+        height: auto;
+        display: block;
+    }
+
+    /* 3. Transforma a lista vertical em uma linha horizontal (row) */
+    .menu-btn {
+        flex-direction: row !important; /* Força o alinhamento um ao lado do outro */
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+        padding: 0;
+        margin-top: 20px;
+        gap: 5px;
+    }
+
+    /* 4. Ajusta o tamanho da fonte para ser legível e caber em linha */
+    .menu-btn li a {
+        font-size: 14px;
+        font-weight: bold;
+        padding: 5px 8px;
+        white-space: nowrap;
+    }
+
+    #nome {
+        font-size: 24px;
+    }
+
+    .sobre-conteiner p {
+        font-size: 14px;
+    }
+
+    /* Skills em grade 2x2 no SD em vez de uma lista vertical longa */
+    .skill-box {
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+/* --- HD (720p) a Full HD (1080p) --- */
+
+ @media (max-width: 768px) {
+    /* 1. Reset da Margem Global */
+    main, section {
+        margin: 0 5%; /* Reduz a margem lateral para aproveitar a tela */
+    }
+
+    /* 2. Menu (Empilhamento) */
+    .Menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    #logo-hd {
+        margin: 0; /* Remove margens fixas */
+        display: flex;
+        flex-grow: initial; 
+        
+    }
+
+    .menu-btn {
+        flex-direction: column; /* Empilha os links */
+        text-align: center;
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    /* 3. Seção Sobre e Contato (Empilhamento) */
+    .Sobre, .portfolio-grid{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sobre-conteiner, .sobre-img {
+        width: 100%; /* Ocupa a largura total */
+        text-align: center;
+    }
+
+    #dev-imagem {
+        width: 80%; /* Ajusta o tamanho da imagem para caber na tela */
+    }
+
+    .Contato-btn{
+        display: none;
+    }
+
+    .Contato img{
+        max-width: 40px;
+    }
+    
+    
+    /* 4. Skills (Empilhamento em telas pequenas) */
+    .Skills-conteiner .skill-box {
+        flex-direction: column; 
+    }
+}
+
+/* --- Responsividade para Telas Grandes --- */
+
+/* --- 2K (1440p) --- */
+@media (min-width: 1441px) {
+    html {
+        font-size: 22px; /* Aumento moderado da fonte */
+    }
+
+    /* Expande o limite de largura para o conteúdo não amontoar */
+    .Portfolio {
+        max-width: 1600px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* --- 4K (2160p) --- */
+@media (min-width: 2500px) {
+    html {
+        font-size: 30px; /* Fonte grande para telas ultra-wide */
+    }
+
+    /* Expande significativamente o limite de largura */
+    .Portfolio {
+        max-width: 2200px !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Garante que as imagens não fiquem pequenas demais no meio do texto */
+    #dev-imagem {
+        max-width: 600px;
+    }
+    
+    .Skills img {
+        width: 120px;
+    }
+}
