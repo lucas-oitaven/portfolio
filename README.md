@@ -26,4 +26,4 @@ O planejamento visual da interface foi elaborado para ser moderno e intuitivo.
 ## 🌐 Hospedagem e Deploy
 
 O site está publicado e disponível para visualização através do GitHub Pages.
-- **Link do Site**: [https://lucas-oitaven.github.io/]([https://lucas-oitaven.github.io/](https://lucas-oitaven.github.io/portfolio/)).
+- **Link do Site**: [https://lucas-oitaven.github.io/]([https://lucas-oitaven.github.io/](https://lucas-oitaven.github.io/portfolio/).
