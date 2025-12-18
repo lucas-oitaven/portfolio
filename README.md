@@ -21,7 +21,7 @@ Para o desenvolvimento deste projeto, foram aplicadas as seguintes tecnologias:
 ## 🎨 Design e Protótipo
 
 O planejamento visual da interface foi elaborado para ser moderno e intuitivo.
-- **Protótipo (Figma)**: [Clique aqui para acessar o protótipo no Figma]([https://www.figma.com/](https://www.figma.com/design/smG8G1nOvxwPwipFAn7hgT/Portfolio?node-id=6-37)).
+- **Protótipo (Figma)**: [Clique aqui para acessar o protótipo no Figma]([https://www.figma.com/](https://www.figma.com/design/smG8G1nOvxwPwipFAn7hgT/Portfolio?node-id=6-37).
 
 ## 🌐 Hospedagem e Deploy
 
