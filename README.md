@@ -1,29 +1,63 @@
-# 🚀 Portfólio Lucas Oitaven
+# Portfolio - Lucas Oitaven
 
-Este é o meu portfólio pessoal desenvolvido para apresentar minha trajetória como desenvolvedor web através da Alpha Edtech.
+Portfolio pessoal com foco em apresentacao profissional, projetos praticos e evolucao tecnica.
 
-## 💻 Sobre o Projeto
+## Sobre o projeto
 
-O portfólio reúne projetos que utilizam tecnologias web para criar experiências funcionais e intuitivas. Atualmente, ele conta com seções de:
-- **Sobre**: Breve resumo profissional.
-- **Skills**: Tecnologias dominadas, como Html, Css, Git/GitHub, Ux/Ui e Figma.
-- **Projetos realizados**: Galeria de projetos ativos.
-- **Contato**: Links diretos para redes profissionais e comunicação.
+Este site foi desenvolvido para apresentar minha trajetoria como desenvolvedor e destacar projetos, habilidades e formas de contato.
 
-## 🛠️ Tecnologias Utilizadas
+Secoes principais:
+- Sobre
+- Skills e Tecnologias (carrossel com navegacao infinita e manual)
+- Projetos
+- Contato
 
-Para o desenvolvimento deste projeto, foram aplicadas as seguintes tecnologias:
-- **HTML5**: Estruturação semântica do conteúdo.
-- **CSS3**: Estilização, layouts flexíveis (Flexbox/Grid) e responsividade para dispositivos SD, HD e Ultra-Wide (4K).
-- **Markdown**: Documentação do projeto.
-- **Git & GitHub**: Controle de versão e gerenciamento de código.
+## Recursos implementados
 
-## 🎨 Design e Protótipo
+- Layout responsivo para desktop, tablet e mobile
+- Tema claro/escuro com persistencia em localStorage
+- Carrossel de skills com autoplay e botoes laterais
+- Organizacao de codigo em arquivos separados (HTML, CSS e JavaScript)
+- Metadados para compartilhamento social (Open Graph e Twitter Cards)
+- Otimizacao de imagens com lazy loading
 
-O planejamento visual da interface foi elaborado para ser moderno e intuitivo.
-- **Protótipo (Figma)**: [Clique aqui para acessar o protótipo no Figma]([https://www.figma.com/](https://www.figma.com/design/smG8G1nOvxwPwipFAn7hgT/Portfolio?node-id=6-37).
+## Tecnologias utilizadas
 
-## 🌐 Hospedagem e Deploy
+- HTML5
+- CSS3
+- JavaScript (vanilla)
+- Git e GitHub
 
-O site está publicado e disponível para visualização através do GitHub Pages.
-- **Link do Site**: [https://lucas-oitaven.github.io/]([https://lucas-oitaven.github.io/](https://lucas-oitaven.github.io/portfolio/).
+## Estrutura de arquivos
+
+- [index.html](index.html): estrutura da pagina
+- [style.css](style.css): estilos e responsividade
+- [script.js](script.js): interacoes (tema e carrossel)
+- [img](img): imagens e icones
+
+## Projetos em destaque
+
+- Parking Control API (projeto em grupo)
+	- Repositorio: https://github.com/EduardoM69/Parking-control-API
+	- Contexto: projeto desenvolvido em equipe
+
+- Pagina de Cafe
+	- Demo: https://lucas-oitaven.github.io/CoffeeShop/
+
+- Loja de Bowls
+	- Demo: https://lucas-oitaven.github.io/BowlShop/
+
+## Como executar localmente
+
+1. Clone o repositorio.
+2. Abra a pasta no VS Code.
+3. Execute o arquivo [index.html](index.html) no navegador.
+
+## Deploy
+
+Publicado com GitHub Pages:
+- Site: https://lucas-oitaven.github.io/portfolio/
+
+## Prototipo
+
+- Figma: https://www.figma.com/design/smG8G1nOvxwPwipFAn7hgT/Portfolio?node-id=6-37

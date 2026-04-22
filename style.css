@@ -1,418 +1,620 @@
+:root {
+    --bg-primary: #1f272f;
+    --bg-secondary: #161a22;
+    --text-primary: #ffffff;
+    --text-muted: #c2ccda;
+    --accent: #08bc91;
+    --accent-dark: #01644d;
+    --radius: 12px;
+    --container: 1120px;
+    --header-offset: 98px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
-    padding: 0;
-    background-color:#1F272F;
-    color: #fff;
-    font-family: "Tahoma", Geneva, sans-serif;
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: Tahoma, Geneva, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
-main{
-    max-width: 1200px;
+body[data-theme="light"] {
+    --bg-primary: #eef2f7;
+    --bg-secondary: #f8fbff;
+    --text-primary: #17212b;
+    --text-muted: #4a5b70;
+    --accent: #0b9f7d;
+    --accent-dark: #0a8368;
+}
+
+body[data-theme="light"] .Menu,
+body[data-theme="light"] .Skills-conteinerbox,
+body[data-theme="light"] .Contato {
+    border-color: #d7e0ea;
+}
+
+body[data-theme="light"] .menu-btn li a {
+    color: #25364a;
+}
+
+body[data-theme="light"] .Skills,
+body[data-theme="light"] .skill-card,
+body[data-theme="light"] .skills-marquee,
+body[data-theme="light"] .projeto,
+body[data-theme="light"] .contato-card {
+    border-color: #d5dfec;
+}
+
+body[data-theme="light"] .skills-marquee,
+body[data-theme="light"] .projeto,
+body[data-theme="light"] .contato-card {
+    background-color: #f7faff;
+}
+
+body[data-theme="light"] .Skills,
+body[data-theme="light"] .skill-card {
+    background: linear-gradient(180deg, #f5fbff 0%, #d7efe8 100%);
+}
+
+body[data-theme="light"] .contato-card {
+    background: linear-gradient(180deg, #f5fbff 0%, #d7efe8 100%);
+}
+
+body[data-theme="light"] .projeto h3,
+body[data-theme="light"] .sobre-conteiner h2 {
+    color: #1f3447;
+}
+
+body[data-theme="light"] .caption-invisivel {
+    color: #2e4258;
+}
+
+main {
+    width: min(100% - 3rem, var(--container));
     margin: 0 auto;
-    padding: 2rem 0;
-    display: flex;
-    flex-direction: row;
 }
 
-section{
-    margin: 0 10%;
-    padding: 2% 0;
-    padding: 3rem 0;
+section {
+    padding: 4rem 0;
+}
+
+section[id] {
+    scroll-margin-top: var(--header-offset);
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1.9rem, 3.8vw, 2.6rem);
+    line-height: 1.15;
+}
+
+h2 {
+    font-size: clamp(1.45rem, 3vw, 2rem);
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: clamp(1.05rem, 2vw, 1.25rem);
+}
+
+p {
+    color: var(--text-muted);
+    font-size: clamp(0.95rem, 1.25vw, 1.02rem);
 }
 
 a {
     text-decoration: none;
-    color: #fff;
-    text-transform: uppercase;
+    color: inherit;
 }
 
 /* Menu */
 
-#logo-hd{
+.Menu {
+    position: sticky;
+    top: 0;
+    z-index: 20;
     display: flex;
-    margin-right: 50%;
-    margin-left: 5%;
-    padding: 2%;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-    max-width: 30%;
+    justify-content: space-between;
+    background-color: var(--bg-secondary);
+    padding: 0.85rem clamp(1rem, 4vw, 2.25rem);
+    border-bottom: 1px solid #253043;
 }
 
-.Menu{
+.menu-right {
     display: flex;
-    flex-direction:row;
-    width: 100%;
-    margin-bottom: 1%;
-    background-color:#161A22;
+    align-items: center;
+    gap: 0.9rem;
 }
 
-.menu-btn{
+#logo-hd {
+    width: clamp(170px, 20vw, 300px);
+    max-width: 46vw;
+    height: auto;
+    display: block;
+}
+
+.menu-btn {
     display: flex;
-    width: 100%;
     list-style: none;
-    align-items: end;
-    justify-content: space-around;
+    align-items: center;
+    gap: 1.1rem;
+    margin: 0;
+    padding: 0;
 }
 
-.menu-btn :hover{
-    scale:1.10;
-    color: #08BC91;
-    transition: color 0.5s ease;
-    transition-delay: 0.1s;
+.menu-btn li a {
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.84rem;
+    font-weight: 700;
+    color: #dce4ef;
+    transition: color 0.2s ease;
 }
 
+.menu-btn li a:hover {
+    color: var(--accent);
+}
+
+.theme-toggle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #2f415a;
+    background: #202a38;
+    color: #e7eef8;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: translateY(-2px);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+body[data-theme="light"] .theme-toggle {
+    background: #eaf0f8;
+    color: #1f3346;
+    border-color: #ccdae8;
+}
 
 /* Seção sobre */
 
-.Sobre{
-    display: flex;
-    flex-direction: row;
+.Sobre {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: clamp(1.25rem, 4vw, 3rem);
+    align-items: center;
 }
 
-.sobre-conteiner{
-    width: 50%;
-}
-
-.sobre-img{
-    text-align: end;
-}
-
-#dev-imagem{
-    padding-left: 50%;
-    width:80%;
-}
-
-.Contato-btn{
-    padding: 1%;
-    text-decoration: none;
-    background-color: #08BC91;
-    text-align: center;
-    border-radius: 10px;
-    max-width: 20%;
-}
-
-#nome{
-    text-transform: uppercase;
-    font-size: 2rem;
-}
-
-#nome:hover{
-    color:#08BC91;
-    transition: color 0.5s ease;
-    transition-delay: 0.1s;
-}
-
-.sobre-img img:hover {
-    scale:1.10;
-    transition: scale 0.5s ease;
-    transition-delay: 0.1s;
-}
-
-.Contato-btn:hover{
-    scale:1.30;
-    transition: scale 0.5s ease;
-    transition-delay: 0.1s;
-}
-
-/* Seção Skills */
-
-.Skills-conteinerbox {
+.sobre-conteiner {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: #161A22;
+    gap: 1rem;
+}
+
+.eyebrow {
+    color: var(--accent);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    font-size: 0.78rem;
+}
+
+#nome {
+    text-transform: uppercase;
+}
+
+.sobre-conteiner h2 {
+    color: #dfe8f6;
+    font-size: clamp(1.1rem, 2.2vw, 1.4rem);
+}
+
+.sobre-img {
+    text-align: right;
+}
+
+#dev-imagem {
+    width: min(100%, 360px);
+    border-radius: var(--radius);
+    transition: transform 0.2s ease;
+}
+
+#dev-imagem:hover {
+    transform: translateY(-4px);
+}
+
+.Contato-btn {
+    margin-top: 0.6rem;
+}
+
+.Contato-btn a {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #112025;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 0.82rem;
+    padding: 0.72rem 1.1rem;
+    border-radius: 10px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.Contato-btn a:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+}
+
+/* Seção skills */
+
+.Skills-conteinerbox {
     width: 100%;
+    background-color: var(--bg-secondary);
+}
+
+.Skills-conteinerbox h2 {
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
 .Skills-conteiner {
-    margin: 0 10%;
-    padding: 2% 0;
-    
+    width: min(100% - 3rem, var(--container));
+    margin: 0 auto;
+    display: block;
 }
-
-.Skills-conteiner .skill-box {
-        display: flex;
-        flex-direction: row;
-    }
-
 
 .Skills {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2%;
-    margin: 2%;
-    background: linear-gradient(#161A22, #01523f);
+    justify-content: space-between;
+    gap: 0.7rem;
+    text-align: center;
+    padding: 1rem 0.9rem;
+    border-radius: var(--radius);
+    border: 1px solid #243247;
+    background: linear-gradient(180deg, #1d2530 0%, #01523f 100%);
+    transition: transform 0.2s ease, background 0.2s ease;
+}
 
+.Skills h3 {
+    font-size: 1rem;
 }
 
 .Skills img {
-    width: 50%;
+    width: 62px;
 }
 
-.Skills:hover{
-    scale:1.10;
-    opacity: 95%;
-    background: linear-gradient(#212835, #01644d);
-    transition: scale 0.5s ease;
-    transition-delay: 0.1s;
+.Skills:hover {
+    transform: translateY(-4px);
+    background: linear-gradient(180deg, #212835 0%, var(--accent-dark) 100%);
+}
+
+.skills-marquee {
+    position: relative;
+    border: 1px solid #263246;
+    border-radius: var(--radius);
+    padding: 1.2rem 3rem;
+    background-color: #1a212d;
+}
+
+.skills-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 36px;
+    height: 36px;
+    border: 1px solid #2f415a;
+    border-radius: 50%;
+    background-color: #202a38;
+    color: #d9e3f0;
+    font-size: 1.05rem;
+    font-weight: 700;
+    line-height: 1;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.skills-nav:hover {
+    transform: translateY(-50%) scale(1.05);
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+.skills-nav.prev {
+    left: 0.8rem;
+}
+
+.skills-nav.next {
+    right: 0.8rem;
+}
+
+.skills-marquee-window {
+    overflow: hidden;
+    border-radius: 10px;
+    padding: 0.4rem 0;
+}
+
+.skills-marquee-track {
+    display: flex;
+    width: max-content;
+    gap: 0.8rem;
+    will-change: transform;
+}
+
+.skills-group {
+    display: flex;
+    gap: 0.8rem;
+    flex: 0 0 auto;
+}
+
+.skill-card {
+    min-width: 176px;
+    min-height: 124px;
+    justify-content: center;
+    background: linear-gradient(180deg, #1d2530 0%, #054b3b 100%);
+}
+
+.skill-card img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+}
+
+.skill-card h3 {
+    font-size: 0.9rem;
 }
 
 /* Seção projetos */
 
-.Portfolio{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+.Portfolio {
+    text-align: center;
+}
+
+.Portfolio > p {
+    margin: 0.8rem auto 0;
+    max-width: 780px;
 }
 
 .portfolio-grid {
-    display: flex;
-    flex-direction: row;
-    align-items: center;    
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.2rem;
 }
 
 .projeto {
+    border: 1px solid #273247;
+    border-radius: var(--radius);
+    background-color: #18212e;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1% 1%;
+    gap: 0.75rem;
+    text-align: left;
 }
 
-.projeto img:hover{
-    scale:1.20;
-    opacity: 95%;
-    background: linear-gradient(#212835, #01644d);
-    transition: scale 0.3s ease;
-    transition-delay: 0.1s;
+.projeto h3 {
+    color: #e9eef7;
 }
 
-.projeto img{
-    max-width:100%;
+.projeto img {
+    width: 100%;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+.projeto img:hover {
+    transform: scale(1.02);
 }
 
 /* Seção contato */
 
-.Contato{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: #161A22;
+.Contato {
     width: 100%;
+    background-color: var(--bg-secondary);
+    text-align: center;
 }
 
-.Contato img{
-    max-width: 4rem;
+.Contato h2 {
+    margin-bottom: 0.6rem;
 }
 
-.redes-sociais{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 2%;
+.Contato p {
+    margin: 0 auto;
 }
 
-.contato-card{
-    margin: 0 5%;
+.redes-sociais {
+    width: min(100% - 3rem, var(--container));
+    margin: 1.8rem auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
 }
 
-.caption-invisivel{
-    display: none;
-    color: #fff;
-    padding-top: 1%;
+.contato-card {
+    border: 1px solid #2a364b;
+    border-radius: 10px;
+    background-color: #1a212d;
+    padding: 1rem;
+    transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.contato-card:hover{
-    scale:1.50;
-    transition: scale 0.3s ease;
-    transition-delay: 0.1s;
-    
-}
-
-.contato-card:hover .caption-invisivel{
-        transition-delay: 1s;
-        display:block;
-    }
-
-/*Rodapé*/
-
-footer{
+.contato-card a {
+    min-height: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 1%;
+    justify-content: center;
+    text-align: center;
 }
 
-footer a {
+.contato-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.Contato img {
+    width: 52px;
+    height: 52px;
+    object-fit: contain;
+    display: block;
+}
+
+.caption-invisivel {
+    display: block;
+    margin-top: 0.35rem;
+    font-size: 0.78rem;
+    line-height: 1.2;
+    color: #d4deeb;
+}
+
+/* Rodapé */
+
+footer {
     display: flex;
-    justify-content: center;
-    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+    padding: 1.4rem 1rem;
+}
+
+footer p {
+    font-size: 0.86rem;
 }
 
 #logo-ft {
-    max-width: 20rem;
+    width: clamp(160px, 24vw, 280px);
+    max-width: 70vw;
     height: auto;
-    padding: 1% 0;
- }
+}
 
- /* Media Queries*/
+/* Responsividade */
 
-/* --- SD (640x480) e dispositivos móveis --- */
-@media (max-width: 640px) {
-    
+@media (max-width: 1024px) {
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .redes-sociais {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --header-offset: 132px;
+    }
+
     .Menu {
-        flex-direction: column; 
-        align-items: center;
-        padding: 20px 0;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .menu-right {
         width: 100%;
-    }
-
-    /* 2. Faz o Logo ocupar a largura total e centralizar */
-    #logo-hd {
-        margin: 0 auto !important; /* Remove o margin-right: 50% do css original */
-        max-width: 90%;
-        height: auto;
-        display: block;
-    }
-
-    /* 3. Transforma a lista vertical em uma linha horizontal (row) */
-    .menu-btn {
-        flex-direction: row !important; /* Força o alinhamento um ao lado do outro */
-        flex-wrap: nowrap;
         justify-content: center;
-        width: 100%;
-        padding: 0;
-        margin-top: 20px;
-        gap: 5px;
-    }
-
-    /* 4. Ajusta o tamanho da fonte para ser legível e caber em linha */
-    .menu-btn li a {
-        font-size: 14px;
-        font-weight: bold;
-        padding: 5px 8px;
-        white-space: nowrap;
-    }
-
-    #nome {
-        font-size: 24px;
-    }
-
-    .sobre-conteiner p {
-        font-size: 14px;
-    }
-
-    /* Skills em grade 2x2 no SD em vez de uma lista vertical longa */
-    .skill-box {
-        display: grid !important;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-    }
-}
-
-/* --- HD (720p) a Full HD (1080p) --- */
-
- @media (max-width: 768px) {
-    /* 1. Reset da Margem Global */
-    main, section {
-        margin: 0 5%; /* Reduz a margem lateral para aproveitar a tela */
-    }
-
-    /* 2. Menu (Empilhamento) */
-    .Menu {
-        flex-direction: column;
-        align-items: center;
-    }
-    #logo-hd {
-        margin: 0; /* Remove margens fixas */
-        display: flex;
-        flex-grow: initial; 
-        
+        flex-wrap: wrap;
     }
 
     .menu-btn {
-        flex-direction: column; /* Empilha os links */
-        text-align: center;
-        width: 100%;
-        padding: 10px 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.75rem 1rem;
     }
 
-    /* 3. Seção Sobre e Contato (Empilhamento) */
-    .Sobre, .portfolio-grid{
-        flex-direction: column;
+    .Sobre {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .sobre-conteiner {
         align-items: center;
     }
 
-    .sobre-conteiner, .sobre-img {
-        width: 100%; /* Ocupa a largura total */
+    .sobre-img {
         text-align: center;
     }
 
-    #dev-imagem {
-        width: 80%; /* Ajusta o tamanho da imagem para caber na tela */
+    .skill-card {
+        min-width: 158px;
     }
 
-    .Contato-btn{
-        display: none;
-    }
-
-    .Contato img{
-        max-width: 40px;
-    }
-    
-    
-    /* 4. Skills (Empilhamento em telas pequenas) */
-    .Skills-conteiner .skill-box {
-        flex-direction: column; 
+    .skills-nav {
+        width: 34px;
+        height: 34px;
     }
 }
 
-/* --- Responsividade para Telas Grandes --- */
-
-/* --- 2K (1440p) --- */
-@media (min-width: 1441px) {
-    html {
-        font-size: 22px; /* Aumento moderado da fonte */
+@media (max-width: 520px) {
+    main,
+    .Skills-conteiner,
+    .redes-sociais {
+        width: min(100% - 1.6rem, var(--container));
     }
 
-    /* Expande o limite de largura para o conteúdo não amontoar */
-    .Portfolio {
-        max-width: 1600px !important;
-        margin-left: auto;
-        margin-right: auto;
+    section {
+        padding: 3rem 0;
+    }
+
+    .menu-btn li a {
+        font-size: 0.77rem;
+    }
+
+    .skill-card {
+        min-width: 146px;
+        min-height: 116px;
+    }
+
+    .skill-card img {
+        width: 46px;
+        height: 46px;
+    }
+
+    .skills-marquee {
+        padding: 1rem 2.3rem;
+    }
+
+    .skills-nav.prev {
+        left: 0.45rem;
+    }
+
+    .skills-nav.next {
+        right: 0.45rem;
+    }
+
+    .redes-sociais {
+        grid-template-columns: 1fr;
+    }
+
+    #logo-ft {
+        width: clamp(140px, 56vw, 220px);
     }
 }
 
-/* --- 4K (2160p) --- */
-@media (min-width: 2500px) {
-    html {
-        font-size: 30px; /* Fonte grande para telas ultra-wide */
-    }
-
-    /* Expande significativamente o limite de largura */
-    .Portfolio {
-        max-width: 2200px !important;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    /* Garante que as imagens não fiquem pequenas demais no meio do texto */
-    #dev-imagem {
-        max-width: 600px;
-    }
-    
-    .Skills img {
-        width: 120px;
+@media (prefers-reduced-motion: reduce) {
+    .skills-nav {
+        transition: none;
     }
 }
