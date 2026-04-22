@@ -3,100 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfólio de Lucas Oitaven com projetos, skills em desenvolvimento web e formas de contato profissional.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Lucas Oitaven | Portfólio">
+    <meta property="og:description" content="Conheça os projetos, habilidades e contatos profissionais de Lucas Oitaven.">
+    <meta property="og:url" content="https://lucas-oitaven.github.io/portfolio/">
+    <meta property="og:image" content="https://lucas-oitaven.github.io/portfolio/img/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Lucas Oitaven | Portfólio">
+    <meta name="twitter:description" content="Conheça os projetos, habilidades e contatos profissionais de Lucas Oitaven.">
+    <meta name="twitter:image" content="https://lucas-oitaven.github.io/portfolio/img/logo.png">
+    <link rel="icon" type="image/png" href="./img/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio</title>
-
-    <nav class="Menu" id="menu">
-        <a href="index.html"><img src="./img/logo.png" id="logo-hd" alt="Logo"></a>
-        <ul class="menu-btn">
-            <li><a href="#">Home</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#portfolio">Projetos</a></li>
-            <li><a href="#contato">Contato</a></li>
-        </ul>
-    </nav>
+    <title>Lucas Oitaven | Portfólio</title>
 </head>
 <body>
-    <main class="Sobre" id="sobre">
-        <div class="sobre-conteiner">
-            <p>Olá, eu sou</p>
-            <h2 id="nome">Lucas Oitaven</h2>
-            <h3>Desenvolvedor Web em Formação</h3>
-            <p>Unindo a precisão da minha formação em Engenharia Elétrica com a paixão pelo código, estou trilhando meu caminho no desenvolvimento web através da Alpha Edtech. Este portfólio reúne os projetos onde aplico meu aprendizado para resolver desafios reais através da tecnologia.</p>
-            <div class="Contato-btn" id="contato-btn">
-                <a href="#contato">Entre em contato</a>
+    <header class="Menu" id="menu">
+        <a href="index.html"><img src="./img/logo.png" id="logo-hd" alt="Logo"></a>
+        <div class="menu-right">
+            <nav>
+                <ul class="menu-btn">
+                    <li><a href="#sobre">Home</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#portfolio">Projetos</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+            <button id="themeToggle" class="theme-toggle" type="button" aria-label="Alternar modo claro e escuro" title="Alternar tema">☀</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="Sobre" id="sobre">
+            <div class="sobre-conteiner">
+                <p class="eyebrow">Desenvolvedor em evolução constante</p>
+                <h1 id="nome">Lucas Oitaven</h1>
+                <h2>Desenvolvedor Web</h2>
+                <p>Com base em Engenharia Elétrica e foco em desenvolvimento de software, venho construindo projetos práticos com front-end, back-end e automações. Nos últimos meses ampliei meu domínio em tecnologias como JavaScript, TypeScript, Python, bancos relacionais, Linux e fundamentos de IA, buscando entregar soluções mais completas e profissionais.</p>
+                <div class="Contato-btn" id="contato-btn">
+                    <a href="#contato">Entre em contato</a>
+                </div>
             </div>
-        </div>
-        <div class="sobre-img">
-            <a href="https://www.linkedin.com/in/lucas-oitaven/"><img src="./img/lucas-card.png" id="dev-imagem" alt="Foto do desenvolvedor"></a>
-        </div>
+            <div class="sobre-img">
+                <a href="https://www.linkedin.com/in/lucas-oitaven/" target="_blank" rel="noopener noreferrer"><img src="./img/lucas-card.png" id="dev-imagem" alt="Foto do desenvolvedor"></a>
+            </div>
+        </section>
+
+        <section class="Skills-conteinerbox" id="skills">
+            <h2>Skills e Tecnologias</h2>
+
+            <div class="Skills-conteiner">
+                <div class="skills-marquee" aria-label="Skills e tecnologias">
+                    <button class="skills-nav prev" type="button" aria-label="Voltar skills">&#10094;</button>
+                    <div class="skills-marquee-window">
+                        <div class="skills-marquee-track" id="skillsTrack">
+                            <div class="skills-group" id="skillsGroup">
+                                <article class="Skills skill-card"><h3>HTML</h3><img src="./img/html.png" alt="Ícone HTML"></article>
+                                <article class="Skills skill-card"><h3>CSS</h3><img src="./img/css.png" alt="Ícone CSS" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Git/GitHub</h3><img src="./img/git.png" alt="Ícone Git e GitHub" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>UX/UI</h3><img src="./img/uxui.png" alt="Ícone UX e UI" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>JavaScript</h3><img src="./img/javascript.png" alt="Ícone JavaScript" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>TypeScript</h3><img src="./img/TypeScript.png" alt="Ícone TypeScript" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Python</h3><img src="./img/python.png" alt="Ícone Python" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Flutter</h3><img src="./img/Flutter.png" alt="Ícone Flutter" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>LangChain</h3><img src="./img/Langchain.png" alt="Ícone LangChain" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Inteligência Artificial</h3><img src="./img/IA.jpg" alt="Ícone Inteligência Artificial" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Linux</h3><img src="./img/Linux.png" alt="Ícone Linux" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Servidores</h3><img src="./img/Servidores.png" alt="Ícone Servidores" loading="lazy"></article>
+                                <article class="Skills skill-card"><h3>Banco de Dados</h3><img src="./img/Database.png" alt="Ícone Banco de Dados" loading="lazy"></article>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="skills-nav next" type="button" aria-label="Avançar skills">&#10095;</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="Portfolio" id="portfolio">
+            <h2>Projetos realizados</h2>
+            <p>Seleção de projetos para praticar desenvolvimento web com foco em interface, usabilidade e entrega de valor.</p>
+            
+            <div class="portfolio-grid">
+                <article class="projeto" id="projeto0">
+                    <a href="https://github.com/EduardoM69/Parking-control-API" target="_blank" rel="noopener noreferrer"><h3>Parking Control API</h3></a>
+                    <a href="https://github.com/EduardoM69/Parking-control-API" target="_blank" rel="noopener noreferrer"><img src="./img/parkflow-dashboard.png" alt="Dashboard do projeto ParkFlow" loading="lazy"></a>
+                    <p>Projeto em equipe, API para controle de estacionamento com foco em modelagem de domínio, regras de negócio e persistência de dados.</p>
+                </article>
+                <article class="projeto" id="projeto1">
+                    <a href="https://lucas-oitaven.github.io/CoffeeShop/" target="_blank" rel="noopener noreferrer"><h3>Página de Café</h3></a>
+                    <a href="https://lucas-oitaven.github.io/CoffeeShop/" target="_blank" rel="noopener noreferrer"><img src="./img/projeto1.png" alt="Projeto página de Café" loading="lazy"></a>
+                    <p>Landing page com foco em identidade visual, composição e navegação fluida.</p>
+                </article>
+                <article class="projeto" id="projeto2">
+                    <a href="https://lucas-oitaven.github.io/BowlShop/" target="_blank" rel="noopener noreferrer"><h3>Loja de Bowls</h3></a>
+                    <a href="https://lucas-oitaven.github.io/BowlShop/" target="_blank" rel="noopener noreferrer"><img src="./img/projeto2.png" alt="Projeto Loja de Bowl" loading="lazy"></a>
+                    <p>E-commerce conceitual com hierarquia visual clara e organização de conteúdo.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="Contato" id="contato">
+            <h2>Contato</h2>
+            <p>Vamos conversar sobre oportunidades, projetos e colaborações.</p>
+            <div class="redes-sociais" id="redes">
+                <div class="contato-card" id="linkedin">
+                    <a href="https://www.linkedin.com/in/lucas-oitaven/" target="_blank" rel="noopener noreferrer"><img src="./img/linkedin.png" class="icon" alt="Ícone Linkedin" loading="lazy"><span class="caption-invisivel">LinkedIn</span></a>
+                </div>
+                <div class="contato-card" id="github">
+                    <a href="https://github.com/lucas-oitaven" target="_blank" rel="noopener noreferrer"><img src="./img/github.png" class="icon" alt="Ícone Github" loading="lazy"><span class="caption-invisivel">GitHub</span></a>
+                </div>
+                <div class="contato-card" id="whatsapp">
+                    <a href="https://api.whatsapp.com/send?text=Ol%C3%A1%20Lucas%2C%20vi%20seu%20portf%C3%B3lio!" target="_blank" rel="noopener noreferrer"><img src="./img/Whatsapp.png" class="icon" alt="Ícone Whatsapp" loading="lazy"><span class="caption-invisivel">WhatsApp</span></a>
+                </div>
+                <div class="contato-card" id="email">
+                    <a href="mailto:lucas.oitaven@gmail.com"><img src="./img/mail.png" class="icon" alt="Ícone E-mail" loading="lazy"><span class="caption-invisivel">E-mail</span></a>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <a href="index.html"><img src="./img/logo.png" id="logo-ft" alt="Logo"></a>
+            <p>© Todos os direitos reservados a Lucas Oitaven, 2026</p>
+        </footer>
     </main>
-
-    <section class="Skills-conteinerbox" id="skills">
-        <h1>Skills</h1>
-
-        <div class="Skills-conteiner">
-            <div class="skill-box">
-                <div class="Skills" id="skill-html">
-                    <h2>Html</h2>
-                    <img src="./img/html.png" alt="Ícone html">
-                </div>
-                <div class="Skills" id="skill-css">
-                    <h2>Css</h2>
-                    <img src="./img/css.png" alt="Ícone css">
-                </div>
-                <div class="Skills" id="skill-git">
-                    <h2>Git/GitHub</h2>
-                    <img src="./img/git.png" alt="Ícone Git/Github">
-                </div>
-                <div class="Skills" id="skill-uxui">
-                    <h2>Ux/Ui</h2>
-                    <img src="./img/uxui.png" alt="Ícone Ux/Ui">
-                </div>
-            </div>
-        </div>
-
-    </section>
-
-    <section class="Portfolio" id="portfolio">
-        <h1>Projetos realizados</h1>
-        <p>Portfólio de Projetos: Explorando tecnologias web para criar experiências funcionais e intuitivas.</p>
-        
-        <div class="portfolio-grid">
-            <div class="projeto" id="projeto1">
-                <a href="https://lucas-oitaven.github.io/CoffeeShop/" target="_blank"><h3>Pagina de Café</h3></a>
-                <a href="https://lucas-oitaven.github.io/CoffeeShop/" target="_blank"><img src="./img/projeto1.png" alt="Projeto página de Café"></a>
-            </div>
-            <div class="projeto" id="projeto2">
-                <a href="https://lucas-oitaven.github.io/BowlShop/" target="_blank"><h3>Loja de Bowls</h3></a>
-                <a href="https://lucas-oitaven.github.io/BowlShop/" target="_blank"><img src="./img/projeto2.png" alt="Projeto Loja de Bowl"></a>
-            </div>
-        </div>
-    </section>
-
-    <section class="Contato" id="contato">
-        <h1>Contato</h1>
-        <div class="redes-sociais" id="redes">
-            <div class="contato-card" id="linkedin">
-                <a href="https://www.linkedin.com/in/lucas-oitaven/"><img src="./img/icon-linkedin.png" class="icon" alt="Ícone Linkedin"><figcaption class="caption-invisivel">Linkedin</figcaption></a>
-            </div>
-            <div class="contato-card" id="github">
-                <a href="https://github.com/lucas-oitaven"><img src="./img/icon-github.png" class="icon" alt="Ícone Github"><figcaption class="caption-invisivel">Github</figcaption></a>
-            </div>
-            <div class="contato-card"  id="whatsapp">
-                <a href="https://api.whatsapp.com/send?text=/"><img src="./img/icon-whats.png" class="icon" alt="Ícone Whatsapp"><figcaption class="caption-invisivel">WhatsApp</figcaption></a>
-            </div>
-            <div class="contato-card" id="email">
-                <a href="mailto:lucas.oitaven@gmail.com"><img src="./img/icon-mail.png" class="icon" alt="Ícone E-mail"><figcaption class="caption-invisivel">E-mail</figcaption></a>
-            </div>
-        </div>
-
-    </section>
-    
+    <script src="script.js"></script>
 </body>
-<footer>
-    <a href="index.html"><img src="./img/logo.png" id="logo-ft" alt="Logo"></a>
-    <p>© Todos os direitos reservados a Lucas Oitaven, 2025</p>
-</footer>
 </html>
