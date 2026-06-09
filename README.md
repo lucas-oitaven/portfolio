@@ -1,10 +1,10 @@
 # Portfolio - Lucas Oitaven
 
-Portfolio pessoal com foco em apresentacao profissional, projetos praticos e evolucao tecnica.
+Portfolio pessoal com foco em apresentacao profissional, projetos praticos e entrega de valor para recrutadores e possiveis clientes.
 
 ## Sobre o projeto
 
-Este site foi desenvolvido para apresentar minha trajetoria como desenvolvedor e destacar projetos, habilidades e formas de contato.
+Este site foi desenvolvido para apresentar minha trajetoria em desenvolvimento Full Stack e destacar projetos, habilidades e formas de contato.
 
 Secoes principais:
 - Sobre
@@ -20,6 +20,7 @@ Secoes principais:
 - Organizacao de codigo em arquivos separados (HTML, CSS e JavaScript)
 - Metadados para compartilhamento social (Open Graph e Twitter Cards)
 - Otimizacao de imagens com lazy loading
+- Copy estrategica para comunicacao profissional (tecnica + negocio)
 
 ## Tecnologias utilizadas
 
@@ -37,15 +38,17 @@ Secoes principais:
 
 ## Projetos em destaque
 
-- Parking Control API (projeto em grupo)
-	- Repositorio: https://github.com/EduardoM69/Parking-control-API
-	- Contexto: projeto desenvolvido em equipe
+- Desafio Final de Ciclo
+	- Repositorio: https://github.com/lucas-oitaven/DesafioCicloOficina
+	- Foco: automacao de atendimento via WhatsApp e gestao de ordens de servico
 
-- Pagina de Cafe
-	- Demo: https://lucas-oitaven.github.io/CoffeeShop/
+- Parking Control API
+	- Repositorio: https://github.com/lucas-oitaven/Parking-control-API
+	- Foco: API REST para controle de veiculos com regras de negocio e persistencia
 
-- Loja de Bowls
-	- Demo: https://lucas-oitaven.github.io/BowlShop/
+- Burger Queen AI Assistant
+	- Repositorio: https://github.com/lucas-oitaven/burger-queen-ai-assistant
+	- Foco: assistente com memoria e RAG para atendimento e automacao com IA
 
 ## Como executar localmente
 
